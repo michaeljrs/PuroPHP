@@ -65,8 +65,8 @@ function ServiceHandler() {
         $data2->Numero = "437";
         $data2->Complemento = "437";
     $data->Endereco = $data2;
-
-    return $j;
+    $x=$_REQUEST["q"];
+    return $j.$x;
    # return json_encode($data);
 };
 
