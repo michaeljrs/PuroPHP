@@ -12,10 +12,11 @@ function ServiceHandler() {
         $data2 = new stdClass();
         $data2->Logradouro = "Rua Jornalista Luis Eduardo Lobo";
         $data2->Numero = "437";
+        $data2->Complemento = "437";
     $data->Endereco = $data2;
 
     
-    return "<div>". json_encode($data)."</div>;
+    return json_encode($data);
 };
 
 
