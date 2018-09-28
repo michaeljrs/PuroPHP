@@ -7,12 +7,11 @@ require 'vendor/autoload.php';
 function ExecuteMySQL($query)
 {
 
-
-	$servername = "sdi.iabas.org.br:3306";
+	$servername = 'free.cd62bdywcrue.sa-east-1.rds.amazonaws.com';
 	$username = "root";
-	$password = "010572!dev";
-	//$DB="portalinfo";
-	$DB="indicadores";
+	$password = '#192341!Dev';
+	
+	$DB="mydb";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password,$DB);
@@ -52,7 +51,7 @@ function rectoARRAY($rec)
 function ServiceHandler() {
 
 
-    $query="select  VARIAVEL_ID,VARIAVEL_NOME  from VARIAVEL order by VARIAVEL_ID ";
+    $query="select title from bx_wall_events  ";
     $result=ExecuteMySQL($query);
     $recV=rectoARRAY($result);
 
