@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 
 function ServiceHandler() {
     $data = new stdClass();
-    $data->Output = "Hello World!";
+    $data->MeuDado = "Hello World!";
 
     return json_encode($data);
 };
